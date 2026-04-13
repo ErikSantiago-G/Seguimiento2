@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Análisis Global del Mercado Laboral en Inteligencia Artificial</title>
+  <meta name="description" content="Exploración, análisis y tendencias del mercado laboral en Inteligencia Artificial 2025.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="hero">
+    <div class="container">
+      <h1>Tendencias en Inteligencia Artificial 2025</h1>
+      <p>Un análisis de datos detallado sobre salarios, demanda y tendencias estructurales del <strong>Global AI Job Market</strong>.</p>
+      <a href="#analisis" class="btn">Explorar el Análisis</a>
+      <a href="#dashboard" class="btn" style="margin-left: 10px;">Ver Dashboard Interactivo</a>
+    </div>
+  </header>
+
+  <main class="container" id="analisis">
+    <!-- Paso 1 -->
+    <section>
+      <h2>Paso 1: Carga de Datos y Estructura Base</h2>
+      <p>El primer paso consistente en identificar y cargar nuestra fuente de información principal. Utilizamos KaggleHub para extraer el dataset global con más de 15,000 registros.</p>
+      <div class="grid-cards">
+        <div class="card">
+          <h3>Estructura del Dataset</h3>
+          <ul>
+            <li>15,000 registros procesados.</li>
+            <li>20 variables en total (numéricas y categóricas).</li>
+            <li>0 valores faltantes (dataset limpio de origen).</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Variables Principales</h3>
+          <ul>
+            <li><strong>Idenficación:</strong> job_id</li>
+            <li><strong>Salarios:</strong> salary_usd, salary_local</li>
+            <li><strong>Características:</strong> experience_level, remote_ratio</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Paso 2 -->
+    <section>
+      <h2>Paso 2: Análisis de Variables Numéricas</h2>
+      <p>Las variables numéricas nos permiten observar el comportamiento central y la dispersión, especialmente en el factor salarial.</p>
+      <div class="grid-cards">
+        <div class="card">
+          <h3>Salarios USD</h3>
+          <ul>
+            <li>Mínimo: $16,621</li>
+            <li>Máximo: $410,273</li>
+            <li>Detección de outliers (~2.7% en el tope alto).</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Otras Variables</h3>
+          <ul>
+            <li><strong>Años de Experiencia:</strong> Correlacionado fuertemente con el salario.</li>
+            <li><strong>Remote Ratio:</strong> Incremento sostenido post-pandemia.</li>
+            <li><strong>Puntaje de Beneficios:</strong> Variabilidad por región.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Paso 3 -->
+    <section>
+      <h2>Paso 3: Análisis de Variables Categóricas</h2>
+      <p>El análisis de frecuencias nos permite identificar los roles más demandados, el tamaño de las empresas y su ubicación predominante.</p>
+      <div class="grid-cards">
+        <div class="card">
+          <h3>Top Roles Demandados</h3>
+          <ul>
+            <li>Data Scientist</li>
+            <li>Machine Learning Engineer</li>
+            <li>AI Engineer</li>
+            <li>Data Engineer</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Contexto Empresarial</h3>
+          <ul>
+            <li>Concentración en Norteamérica.</li>
+            <li>Crecimiento en Startups vs Corporativas.</li>
+            <li>Altos niveles de educación requeridos.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Paso 4 -->
+    <section>
+      <h2>Paso 4: Correlaciones y Patrones</h2>
+      <p>Calculamos la matriz de correlación para identificar relaciones lineales directas. Se observó:</p>
+      <div class="card">
+        <h3>Hallazgos Clave</h3>
+        <ul>
+          <li><strong>Salario USD ↔ Años de Experiencia:</strong> Correlación Fuerte Positiva.</li>
+          <li><strong>Nivel de Educación ↔ Puntaje de Beneficios:</strong> Correlación Moderada Positiva.</li>
+          <li>Los trabajos de trabajo remoto se concentran principalmente en economías de altos ingresos.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="dashboard" style="text-align: center; margin-top: 5rem;">
+      <h2>Dashboard Interactivo en Tiempo Real</h2>
+      <p>Para una experiencia práctica y exploratoria, hemos desarrollado un dashboard en <strong>Streamlit</strong> que permite filtrar, visualizar en mapas interactivos y realizar predicciones salariales (Machine Learning).</p>
+      <br>
+      <div style="background: var(--card-bg); padding: 2rem; border-radius: 12px; border: 1px solid var(--card-border); max-width: 600px; margin: 0 auto;">
+        <h3>🚀 Ejecuta el Dashboard Localmente</h3>
+        <code style="background: rgba(0,0,0,0.5); padding: 10px; border-radius: 8px; display: block; margin: 15px 0; color: #a78bfa;">
+          pip install -r requirements.txt<br>
+          streamlit run app.py
+        </code>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Desarrollado para la materia de Análisis de Datos.</p>
+      <div style="margin-top: 10px;">
+        <a href="https://github.com/ErikSantiago-G/Seguimiento2" target="_blank" style="color: var(--accent-color); text-decoration: none; font-weight: bold;">
+          <img src="https://img.shields.io/badge/GitHub-Repo-181717?logo=github&logoColor=white" alt="GitHub Repository">
+        </a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
